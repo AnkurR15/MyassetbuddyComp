@@ -4,6 +4,8 @@ import './tableheader.module.scss'
 
 interface HeaderProps {
   headers: string[];
+
+  
 }
 
 const Header: React.FC<HeaderProps> = ({ headers }) => {
@@ -11,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ headers }) => {
     <thead>
       <tr>
         {headers.map((header, index) => (
-          <th key={index}>{header}</th>
+          <th key={index}> {header}</th>
         ))}
       </tr>
     </thead>
