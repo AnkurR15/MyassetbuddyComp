@@ -4,6 +4,7 @@ import TableHeader from '../tableheader/Header';
 import TableRow from '../tablerow/Row';
 
 
+
 interface TableProps {
   data: Array<{ id: number; age: number; firstName: string; lastName: string; fullName: string }>;
 }
