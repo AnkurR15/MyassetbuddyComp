@@ -38,7 +38,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
 
   return (
     <div>
-      <button onClick={handleEditAll}>Edit All</button>
+      <button onClick={handleEditAll}> Edit </button>
       <table>
         <thead>
           <TableHeader />
