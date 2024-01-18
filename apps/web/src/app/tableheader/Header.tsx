@@ -1,23 +1,15 @@
-// Header.tsx
 import React from 'react';
-import './tableheader.module.scss'
 
-interface HeaderProps {
-  headers: string[];
-
-  
-}
-
-const Header: React.FC<HeaderProps> = ({ headers }) => {
+const TableHeader: React.FC = () => {
   return (
-    <thead>
-      <tr>
-        {headers.map((header, index) => (
-          <th key={index}> {header}</th>
-        ))}
-      </tr>
-    </thead>
+    <tr>
+      <th>ID</th>
+      <th>Age</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Full Name</th>
+    </tr>
   );
 };
 
-export default Header;
+export default TableHeader;

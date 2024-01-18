@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+// styles.scss
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+    }
+  
+    td {
+      &:nth-child(6) {
+        button {
+          padding: 5px 10px;
+          background-color: #4caf50;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+      }
+    }
+  }
+  
+  // Additional styles for editing section (customize based on your needs)
+  div {
+    margin-top: 20px;
+  
+    input {
+      padding: 8px;
+      margin-right: 10px;
+    }
+  
+    button {
+      padding: 8px 12px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+  

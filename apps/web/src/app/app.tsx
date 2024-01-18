@@ -1,36 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Table from './table/Table';
-import './app.module.scss';
-
 
 const App: React.FC = () => {
-  const headers = ['ID','FirstName', 'lastName', 'FullName','Age'];
-  const initialData = [
-    [1,'John', 'Wick', 'John Wick',25],
-    [2,'Joe', 'Jones', 'Joe Jones',35], 
-    [3,'sam', 'Cena', 'sam Cena',20],
-    [4,'dawyne', 'Wick', 'dawyne Wick',28],
-    [5,'shwan', 'Jones', 'shwan Jones',15], 
-    [6,'lee', 'Cena', 'lee Cena',22],
+  const data = [
+    { id: 1, age: 20, firstName: 'John', lastName: 'Doe', fullName: 'John Doe' },
     
-  ];
-   
-  const [data, setData] = useState(initialData);
+    { id: 2, age: 20, firstName: 'John', lastName: 'Doe', fullName: 'John Doe' },
+    
+    { id: 3, age: 20, firstName: 'John', lastName: 'Doe', fullName: 'John Doe' },
 
-  const handleCellEdit = (newValue: string, rowIndex: number, columnIndex: number) => {
-    const newData = [...data];
-    newData[rowIndex][columnIndex] = newValue;
-    setData(newData);
-  };
+    { id: 4, age: 25, firstName: 'Jane', lastName: 'Smith', fullName: 'Jane Smith' },
+    // Add more data rows as needed
+  ];
 
   return (
     <div>
-      <h1 > Table</h1>
-      <Table headers={headers} data={data.map(row => row.map(cell => String(cell)))} onCellEdit={handleCellEdit} />
+      <h1>Table Example</h1>
+      <Table data={data} />
     </div>
   );
 };
 
 export default App;
-
-
