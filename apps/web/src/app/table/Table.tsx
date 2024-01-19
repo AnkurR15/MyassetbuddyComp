@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import TableHeader from '../tableheader/Header';
 import TableRow from '../tablerow/Row';
+import './table.module.scss';
 
 
 
 interface TableProps {
-  data: Array<{ id: number; age: number; firstName: string; lastName: string; fullName: string }>;
+  data: Array<{ id: number; age: number; firstName: string; lastName: string;}>;
 }
 
 const Table: React.FC<TableProps> = ({ data }) => {
@@ -15,7 +16,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
 
   const handleEdit = (
     index: number,
-    newData: { id: number; age: number; firstName: string; lastName: string; fullName: string }
+    newData: { id: number; age: number; firstName: string; lastName: string; }
   ) => {
     const updatedData = [...editedData];
     updatedData[index] = newData;
@@ -25,7 +26,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
   const handleSaveChanges = () => {
     const updatedData = editedData.map((row) => ({
       ...row,
-      fullName: `${row.firstName} ${row.lastName}`,
+      // fullName: `${row.firstName} ${row.lastName}`,
     }));
     // Save changes to the server or perform any other necessary actions
     console.log(updatedData);

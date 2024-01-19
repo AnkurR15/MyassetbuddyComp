@@ -1,4 +1,5 @@
 import React from 'react';
+import './tableheader.module.scss';
 
 const TableHeader: React.FC = () => {
   return (
@@ -7,7 +8,6 @@ const TableHeader: React.FC = () => {
       <th>Age</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>Full Name</th>
     </tr>
   );
 };
